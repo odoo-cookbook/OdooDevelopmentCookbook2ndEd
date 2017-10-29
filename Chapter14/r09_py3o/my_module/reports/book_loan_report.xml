@@ -5,7 +5,7 @@
     <field name="model">library.member</field>
     <field name="report_name">library.member.loans</field>
     <field name="report_type">py3o</field>
-    <field name="py3o_filetype">odt</field>
+    <field name="py3o_filetype">pdf</field>
     <field name="py3o_server_id" ref="local_py3o_server"/>
     <field name="module">my_module</field>
     <field name="py3o_template_fallback">reports/book_loans.odt</field>
