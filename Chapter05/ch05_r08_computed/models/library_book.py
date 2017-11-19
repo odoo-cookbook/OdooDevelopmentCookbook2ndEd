@@ -1,5 +1,4 @@
-
-from datetime import timedelta as td
+from datetime import timedelta
 from odoo import models, fields
 from odoo import api
 from odoo.fields import Date as fDate
@@ -30,11 +29,11 @@ class LibraryBook(models.Model):
     def _inverse_age(self):
         today = fDate.from_string(fDate.context_today(self))
         for book in self.filtered('date_release'):
-            d = today - td(days=book.age_days)
+            d = today - timedelta(days=book.age_days)
             book.date_release = fDate.to_string(d)
 
     def _search_age(self, operator, value):
-        today = fDate.from_string(fDate.context_today(selfsq))
+        today = fDate.from_string(fDate.context_today(self))
         value_days = timedelta(days=value)
         value_date = fDate.to_string(today - value_days)
         # convert the operator:

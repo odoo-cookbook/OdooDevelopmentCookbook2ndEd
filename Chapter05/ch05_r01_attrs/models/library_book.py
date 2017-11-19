@@ -12,11 +12,12 @@ class LibraryBook(models.Model):
     date_release = fields.Date('Release Date')
     author_ids = fields.Many2many('res.partner', string='Authors')
 
+    @api.multi
     def name_get(self):
         result = []
         for record in self:
             result.append(
                 (record.id,
-                 u"%s (%s)" % (record.name, record.date_released)
+                 "%s (%s)" % (record.name, record.date_released)
                 ))
         return result
