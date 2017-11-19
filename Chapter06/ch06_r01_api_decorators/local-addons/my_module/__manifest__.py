@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 {
     'name': "Title",
     'summary': "Short subtitle phrase",

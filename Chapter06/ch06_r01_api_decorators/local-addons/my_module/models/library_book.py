@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from odoo import models, fields, api
 
 
@@ -36,7 +35,3 @@ class LibraryBook(models.Model):
                 book.state = new_state
             else:
                 continue
-
-    def _test_noapi(self):
-        print "bllllll"
-        return True
